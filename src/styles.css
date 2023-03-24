@@ -10,16 +10,26 @@ body {
 }
 
 h1 {
-  animation: stretch 6s ease-in-out forwards infinite;
+  animation: 6s ease-out scale infinite alternate, 6s ease-out stretch infinite alternate;
   font-family: 'Sharp';
   font-size: clamp(4rem, 1.714rem + 11.43vw, 12rem);
 }
 
-@keyframes stretch {
-  0%, 100% {
-    font-variation-settings: "wght" 200;
+@keyframes scale {
+  0% {
+    font-weight: 200;
   }
-  50% {
-    font-variation-settings: "wght" 700;
+  100% {
+    font-weight: 800;
+  }
+}
+
+@keyframes stretch {
+  0% {
+    font-stretch: 100%;
+  }
+
+  100% {
+    font-stretch: 500%;
   }
 }
