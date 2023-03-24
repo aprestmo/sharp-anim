@@ -3,10 +3,16 @@
   src: url('/SharpGroteskTrial-VF.ttf') format('truetype');
 }
 
+body {
+  display: grid;
+  min-block-size: 100vh;
+  place-items: center;
+}
+
 h1 {
-  animation: stretch 6s ease-in forwards infinite;
+  animation: stretch 6s ease-in-out forwards infinite;
   font-family: 'Sharp';
-  font-size: 5rem;
+  font-size: clamp(4rem, 1.714rem + 11.43vw, 12rem);
 }
 
 @keyframes stretch {
